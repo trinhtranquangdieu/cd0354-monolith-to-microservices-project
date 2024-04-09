@@ -32,7 +32,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   # push:
-  - docker push trinhmarketer/udagram-api-feed
-  - docker push trinhmarketer/udagram-api-user
-  - docker push trinhmarketer/udagram-frontend
-  - docker push trinhmarketer/udagram-reverseproxy
+  - docker push trinhmarketer/udagram-api-feed:v1
+  - docker push trinhmarketer/udagram-api-user:v1
+  - docker push trinhmarketer/udagram-frontend:v1
+  - docker push trinhmarketer/udagram-reverseproxy:v1
