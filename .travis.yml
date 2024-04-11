@@ -23,8 +23,8 @@ script:
 
   # tag:
 
-  - docker tag udagram-api-feed trinhmarketer/udagram-api-feed:v1
-  - docker tag udagram-api-user trinhmarketer/udagram-api-user:v1
+  - docker tag udagram-api-feed trinhmarketer/udagram-api-feed:v6
+  - docker tag udagram-api-user trinhmarketer/udagram-api-user:v6
   - docker tag udagram-frontend trinhmarketer/udagram-frontend:v1
   - docker tag udagram-reverseproxy trinhmarketer/udagram-reverseproxy:v1
 
@@ -32,7 +32,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   # push:
-  - docker push trinhmarketer/udagram-api-feed:v1
-  - docker push trinhmarketer/udagram-api-user:v1
+  - docker push trinhmarketer/udagram-api-feed:v6
+  - docker push trinhmarketer/udagram-api-user:v6
   - docker push trinhmarketer/udagram-frontend:v1
   - docker push trinhmarketer/udagram-reverseproxy:v1
